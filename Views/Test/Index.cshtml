@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    Enter Name<input type="text" id="txt" />
+    <input type="button" id="click" value="click" />
+    <div id="section"></div>
+    <script src="~/plugins/jquery/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#click").click(function () {
+                var name = $("#txt").val();
+                $.ajax({
+                    type:"Post",
+                    url: "/Test/display",
+                    data: { Name: name},
+                    success: function (res) {
+                        $("#section").text(res);
+
+                    }
+
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@model Pratical.Models.EmployeeVM
+@inject Pratical.BL.interfaces.IEmployeeRep employee
+@{
+    ViewBag.Title = "Details";
+}
+
+<form asp-controller="Employee" asp-action="Delete" method="post" class="form-group">
+
+    <label >Employee Name</label>
+    <input type="text" asp-for="Name" disabled class="form-control" />
+    <br /><br />
+
+
+
+    <img class="center" src="~/Files/Photos/@Model.photoName" width="160" height="160" />
+    <br /><br />
+
+    <h3>
+        <a href="~/Files/Docs/@Model.cvName">Download Cv</a>
+    </h3>
+
+
+    <label >Employee Salary</label>
+    <input type="text" asp-for="Salary" disabled class="form-control" />
+    <br /><br />
+
+    <label >Employee Address</label>
+    <input type="text" asp-for="Address" disabled class="form-control" />
+    <br /><br />
+
+    <label >Employee Email</label>
+    <input type="email" asp-for="Email" disabled class="form-control" />
+    <br /><br />
+
+
+    <label >Hire Date</label>
+    <input type="text" asp-for="HireDate" disabled class="form-control" />
+    <br /><br />
+
+
+    <label >Notes</label>
+    <textarea asp-for="Notes" disabled class="form-control" rows="4"></textarea>
+    <br /><br />
+    </form>

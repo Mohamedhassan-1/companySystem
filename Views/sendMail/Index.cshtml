@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "send Mail";
+}
+<h3 style="color:brown">
+    @TempData["mesg"]
+</h3>
+@*method="post"*@
+<form asp-controller="sendMail" asp-action="sendMail" method="post" class="form-group">
+
+
+    <label>Title</label>
+    <input type="text" name="title" class="form-control" />
+    <br />
+
+    <label>Message</label>
+    <textarea name="message" class="form-control" rows="4"></textarea>
+    <br />
+
+    <input type="submit" value="Send" class="btn btn-primary" />
+
+</form>
+
+

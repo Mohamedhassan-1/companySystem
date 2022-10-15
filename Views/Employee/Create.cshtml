@@ -1,0 +1,103 @@
+﻿@model Pratical.Models.EmployeeVM
+@{
+    ViewBag.Title = "Create";
+}
+
+<a asp-controller="Employee" asp-action="Employee" class="btn btn-primary">Back To Employee</a>
+@*default of enctype is text/plain ->recive one value from input*@ 
+<form asp-controller="Employee" asp-action="Create" method="post" enctype="multipart/form-data" class="form-group">
+
+    <label asp-for="Name">Employee Name</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span class="text-danger" asp-validation-for="Name"></span>
+    <br /><br />
+
+    <label asp-for="Salary">Employee Salary</label>
+    <input type="text" asp-for="Salary" class="form-control" />
+    <span class="text-danger" asp-validation-for="Salary"></span>
+    <br /><br />
+
+    <label asp-for="Address">Employee Address</label>
+    <input type="text" asp-for="Address" class="form-control" />
+    <span class="text-danger" asp-validation-for="Address"></span>
+    <br /><br />
+
+    <label asp-for="Email">Employee Email</label>
+    <input type="email" asp-for="Email" class="form-control" />
+    <span class="text-danger" asp-validation-for="Email"></span>
+    <br /><br />
+
+
+    <label asp-for="HireDate">Hire Date</label>
+    <input type="date" asp-for="HireDate" class="form-control" />
+    <span class="text-danger" asp-validation-for="HireDate"></span>
+    <br /><br />
+
+
+    <label asp-for="Notes">Notes</label>
+    <textarea asp-for="Notes" class="form-control" rows="4"></textarea>
+    <span class="text-danger" asp-validation-for="Notes"></span>
+    <br /><br />
+
+    <label>uplaod Photo</label>
+    <input type="file" asp-for="photourl" class="form-control" />
+    <span class="text-danger" asp-validation-for="photourl"></span>
+    <br /><br />
+
+    <label>uplaod Cv</label>
+    <input type="file" asp-for="cvurl" class="form-control" />
+    <span class="text-danger" asp-validation-for="cvurl"></span>
+    <br /><br />
+
+    @*<label asp-for="DepartmentId">Department</label>
+        <select asp-for="DepartmentId" asp-items="@(SelectList)ViewBag.DepartmentList">*@
+    <option>Choose Department</option>
+    </select>
+    <span class="text-danger" asp-validation-for="Notes"></span>
+    <br /><br />
+
+
+    <label>Country</label>
+    <select id="CountryId" asp-items="@(SelectList)ViewBag.CountryList">
+        <option>Choose Country</option>
+    </select>
+    <br /><br />
+
+
+    <label>City</label>
+    <select id="CityId">
+        <option>Choose City</option>
+    </select>
+    <br /><br />
+
+
+    @*<label asp-for="DistrictId">District</label>
+        <select asp-for="DistrictId">
+            <option>Choose District</option>
+        </select>
+        <span class="text-danger" asp-validation-for="DistrictId"></span>
+        <br /><br />
+
+
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" asp-for="IsActive" class="custom-control-input">
+            <label class="custom-control-label" asp-for="IsActive"> Is Active</label>
+        </div>
+        <span class="text-danger" asp-validation-for="IsActive"></span>
+
+        <br />*@
+    <center>
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </center>
+
+</form>
+
+<script>
+
+    $(function () {
+
+
+
+    };)
+</script>

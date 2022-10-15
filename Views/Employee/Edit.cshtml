@@ -1,0 +1,25 @@
+﻿@model Pratical.Models.EmployeeVM
+@{
+    ViewBag.Title= "Edit";
+}
+<a asp-controller="Employee" asp-action="Employee" class="btn btn-primary">Back To Employee</a>
+<form asp-controller="Department" asp-action="Edit" method="post" class="form-group">
+    <label asp-for="Salary">Salary</label>
+    <input asp-for="Salary" type="text" class="form-control" />
+
+    <br />
+
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" type="text" class="form-control" />
+    <br />
+    <label asp-for="Notes">Notes</label>
+    <input asp-for="Notes" type="text" class="form-control" />
+
+    <br />
+    <label asp-for="HireDate">HireDate</label>
+    <input asp-for="HireDate" type="text" class="form-control" />
+    <center>
+        <input type="submit" value="save" class="btn btn-primary" />
+    </center>
+
+</form>

@@ -1,0 +1,21 @@
+﻿@model Pratical.Models.DepartmentVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+<form asp-controller="Department" asp-action="Edit" method="post" class="form-group">
+    <label asp-for="DepartmentName">Department Name</label>
+    <input  asp-for="DepartmentName"type="text"  class="form-control" />
+
+    <br />
+
+    <label asp-for="DepartmentCode">Department code</label>
+    <input asp-for="DepartmentCode"type="text" name="DepartmentCode" class="form-control" />
+    <br />
+    <center>
+        <input type="submit" value="save" class="btn btn-primary" />
+    </center>
+
+</form>
+
